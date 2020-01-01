@@ -1,5 +1,5 @@
 project ('libXNCtrl', [ 'c' ],
-  version: '0.1.0')
+  version: '0.1.1')
 
 libXNCtrl_sources = [ 'src/NVCtrl.c' ]
 
@@ -8,7 +8,7 @@ libXNCtrl_dependencies = [
   dependency('x11')
 ]
 
-libXNCtrl_static = static_library ('XNCtrl',
+libXNCtrl_static = static_library ('XNVCtrl',
   libXNCtrl_sources,
   dependencies: libXNCtrl_dependencies
 )
