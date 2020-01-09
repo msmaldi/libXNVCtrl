@@ -13,6 +13,6 @@ foreach sample_file : samples_files
     sample_name = sample_file.split('.')[0]
     executable (sample_name,
       sample_file,
-      dependencies: [ libXNCtrl_dependency ],
+      dependencies: [ libXNVCtrl_dependency ],
       install: false)
 endforeach

@@ -1,22 +1,21 @@
 project ('libXNCtrl', [ 'c' ],
-  version: '0.1.1')
+    version: '0.1.2')
 
-libXNCtrl_sources = [ 'src/NVCtrl.c' ]
+libXNVCtrl_sources = [ 'src/NVCtrl.c' ]
 
-libXNCtrl_dependencies = [
+libXNVCtrl_dependencies = [
 	dependency('xext'),
-  dependency('x11')
+    dependency('x11')
 ]
 
-libXNCtrl_static = static_library ('XNVCtrl',
-  libXNCtrl_sources,
-  dependencies: libXNCtrl_dependencies
+libXNVCtrl_static = static_library ('XNVCtrl',
+    libXNVCtrl_sources,
+    dependencies: libXNVCtrl_dependencies
 )
 
-libXNCtrl_dependency = declare_dependency (
-  link_with: libXNCtrl_static,
-  include_directories: [ include_directories('./src') ]
+libXNVCtrl_dependency = declare_dependency (
+    link_with: libXNVCtrl_static,
+    include_directories: [ include_directories('./src') ]
 )
 
 subdir('samples')
-subdir('test')
