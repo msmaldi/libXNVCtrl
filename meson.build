@@ -1,4 +1,4 @@
-project ('libXNCtrl', [ 'c' ],
+project ('libXNVCtrl', [ 'c' ],
     version: '0.1.2')
 
 libXNVCtrl_sources = [ 'src/NVCtrl.c' ]
